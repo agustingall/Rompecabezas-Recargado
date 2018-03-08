@@ -1,0 +1,343 @@
+*{
+  /* reseteo los estilos */
+  padding:0;
+  box-sizing: border-box;
+}
+/* Estilos del selector de Imagen para el rompecabezas */
+#lightbox {
+    display: none;
+    background:rgba(0,0,0,.7); repeat; 
+    height:100%; 
+    left:0; 
+    position:fixed;
+    text-align:center;
+    top:0; 
+    width:100%; 
+    z-index: 100;
+}
+.container-image{
+  top: 50%;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: wrap row;
+  left: 50%;
+  opacity: 1;
+  position: absolute;
+  width: 50%;
+}
+img{
+  border: #fff solid 3px;
+  width: 50%;
+  max-height: 250px;
+}
+img:hover{
+  cursor:pointer;
+}
+
+
+body {
+  /* Actualizo la forma de maquetar la página */
+  background-image: url(../media/fondo.jpg);
+  background-size: cover;
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  margin:0;
+  width: 100%;
+}
+/* estilos del header */
+.titulo{
+  background-color: #222f3e;
+  border-bottom: 0;
+  border:2px solid #212121;
+  box-sizing: border-box;
+  color:#c8d6e5;
+  font-family: 'Rancho', serif;
+  font-size: 1.8em;
+  letter-spacing: 2px;
+  text-align: center;
+}
+h1{
+  padding: 0;
+  margin:0;
+}
+/* Estilos del contenedor y otras clases */
+.container{
+  /* las columnas ya no serán table-cell, sino flexibles */
+  display: flex;
+  flex-flow: row nowrap;
+  width: 85%;  
+}
+.centrado{
+  /* cualquier elemento con la clase centrado, automaticamente se centrará */
+  margin-left: auto;
+  margin-right: auto;
+  width: 85%;
+}
+.col-40, .col-60 {
+  border:2px solid #212121;
+  margin: 0;
+}
+.col-40 {
+  background:#2c2c54;
+  box-sizing: border-box;
+  color:#34ace0;
+  font-weight: 600;
+  padding-left:2em;
+  padding-right: 2em;
+  width: 40%;
+}
+.col-60{
+  width: 60%;
+}
+.flex{
+  display:flex;
+}
+
+/* estilos del div de opciones de juego */
+
+h2{
+  margin-top: 10px;
+}
+p{
+  font-family: 'Oswald', serif;
+}
+p.subtitulo{
+  margin-top: -5px;
+}
+.subtitulo{
+  border-bottom: 3px solid #BDBDBD;
+  color:#1E9BAD;
+  font-family: 'Amaranth', serif;
+  font-size: 1.9em;
+  margin-bottom: 0.5em;
+  text-align: center;
+}
+#elegir-imagen label.btn{
+  background-color: #ffffff;
+  border-radius: 1px;
+  border: 3.4px solid #2f3542;
+  color: #2f3542;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Roboto", Arial;
+  font-size: 1.5em;
+  overflow: hidden;
+  padding: 10px;
+  text-align: center;
+  transition: all 1.2s ease;
+  width: 100%;
+}
+#elegir-imagen label.btn:hover{
+  background-color: #ffffff;
+  border-color: #2f3542;
+  color: #2f3542;
+  font-size: 1.7em;
+}
+.form{
+  margin-top: 10px;
+  padding: 15px;
+}
+.form label{
+  font-family: 'Oswald', serif;
+  font-size: 1.2em;
+}
+label{
+  font-family: 'Oxygen',serif;
+}
+.form>label{
+  position: relative;
+}
+#cant-pieza{
+  color: #1976D2;
+  font-size: 1.5em;
+  font-weight: 600;
+  margin-left: 0.5em;
+  position: absolute;
+  text-align: center;
+  width: 5%;
+}
+/*Estilos que se aplican a los radio buttons. Fragmento de estilos obtenidos de  https://codepen.io/falconmasters/pen/PPzeXN*/
+.input-group.radio{
+  display: flex;
+  flex-flow: 1 1 33.3%;
+  justify-content: center;
+}
+.input-group.radio label {
+  -webkit-transition: all 0.3s ease;
+  border-radius: 3px;
+  color: #f7d794;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1em;
+  padding: 5px 15px 5px 51px;
+
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.input-group.radio label:hover {
+  background: #38386B;
+}
+.input-group.radio label:before {
+  background: none;
+  border-radius: 50%;
+  border: 2px solid #f7d794;
+  content: "";
+  display: inline-block;
+  height: 17px;
+  left: 15px;
+  position: absolute;
+  width: 17px;
+}
+.input-group.radio input[type="radio"] {
+  display: none;
+}
+.input-group.radio input[type="radio"]:checked + label:before {
+  display: none;
+}
+.input-group.radio input[type="radio"]:checked + label {
+  background: #b33939;
+  border-radius: 2px;
+  color: #ffda79;
+  padding: 5px 15px;
+}
+h3{
+  color: black;
+  font-weight: 600;
+}
+ul {
+  padding-left: 0;
+  list-style: none;
+}
+li {
+  font-size: 17px;
+  font-family: 'Oswald',serif;
+  padding: 5px 0;
+  text-shadow: 0.5px 0 #000;
+}
+li::before {
+  content: "• ";
+  color: #EC6778;
+}
+#juego{
+  margin-bottom: 0;
+  max-height: 200px;
+}
+.btn.mezclar{
+  background: #ffb142;
+  border-radius: 1px;
+  border: 2px solid #f2f2f2;
+  color: #FFF9FB;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Roboto", Arial;
+  font-size: 1.5em;
+  padding: 15px;
+  transition: all 1.2s ease;
+  width: 100%;
+}
+.btn.mezclar:hover{
+  background: #FFF9FB;
+  border-radius: 10px;
+  color: #ffb142;
+  font-size: 1.8em;
+}
+
+.mov p{
+  font-family: 'Bitter',serif;
+  font-size: 200%;
+  visibility: hidden;
+}
+#mov-restantes{
+  background-color:#f1f2f6;
+  border-radius: 15%;
+  border: solid 2.5px #2d3436;
+  color:#2d3436;
+  padding:0.3em;
+  position: relative;
+  top:-20px;
+  font-size: 3em;
+  visibility: hidden;
+}
+
+canvas{
+  background-color: #718093;
+}
+
+footer{
+  background-color:#227093;
+  border:2px solid #212121;
+  box-sizing: border-box;
+  color:#fff;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.5em;
+  font-style: italic;
+  font-weight: 300;
+  font-weight: 700;
+  padding: 1px;
+  text-align: center;
+}
+
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { 
+    opacity: 1; }
+}
+
+@keyframes mostrar {
+  from { opacity: 0; }
+  to   { 
+    opacity: 1; 
+    visibility: visible;
+  }
+}
+
+@media (max-width:956px){
+  .input-group.radio{
+    display: block;
+  }
+  .mov{
+    display: block;
+    font-size:70%;
+    text-align: center;
+  }
+ /* #elegir-imagen label.btn{
+    font-size: 0.9em;
+  }*/
+  #mov-restantes{
+    border-radius: 0;
+  }
+  #cant-pieza{
+    margin-left: 30%;
+    margin-top: 3%;
+    position: static;
+    width: 35%;
+  }
+}
+
+@media (max-width:690px){
+  .input-group.radio{
+    display: flex;
+    justify-content: center;
+  }
+  .container{
+    display: block;
+  }
+  .col-40,#contenedor-juego{
+    width: 100%;
+  }
+  #cant-pieza{
+    width: 50%%;
+  }
+}
+
+@media (max-width: 500px){
+  .container-image{
+    flex-direction: column;
+  }
+  img{
+    width: 100%;
+  }
+}

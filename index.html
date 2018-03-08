@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Rompecabezas Recargado</title>
+    <link rel="stylesheet" href="css/juego.css">
+    <script src="js/sweetalert/sweetalert.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="js/sweetalert/sweetalert.css">
+    <link href="https://fonts.googleapis.com/css?family=Rancho|Roboto|Bree+Serif|Amaranth|Titillium+Web|Montserrat|Bitter|Oxygen|Lato:700i|Oswald:300,400,500,600,700" rel="stylesheet">
+
+  </head>
+  <body>
+      <div id="lightbox"><div class="container-image">
+    <img src="media/imagen1.png">
+    <img src="media/imagen2.png">
+    <img src="media/imagen3.png">
+    <img src="media/imagen4.png">
+    </div></div>
+    <header class="centrado titulo"><h1>ROMPECABEZAS RECARGADO</h1></header>
+    <div class="container centrado"> <!-- este contenedor será flexible !-->
+      <div class="col-40">
+        <div id="titulo">
+        </div>
+        <section class="seleccionar">
+          <h2 class="subtitulo">  Seleccionar</h2>
+    
+          <article id="elegir-imagen" ><label class="btn ">Usar Imagen Prediseñada</label></article>
+
+          <div class="form"><label>cantidad de piezas por lado: </label><input type="number" name="" id="cant-pieza" value="3" min="3" max="6"></div>
+
+          <p class="subtitulo">Dificultad</p>
+          <div class="input-group radio">
+          <input type="radio" name="dificultad" id="facil" value="1">
+          <label for="facil">Facil</label>
+          <input type="radio" name="dificultad" id="normal" value="2">
+          <label for="normal">Normal</label>
+          <input type="radio" name="dificultad" id="dificil" value="3">
+          <label for="dificil">Dificil</label>
+        </div>
+        </section>
+        <section>
+          <h3 class="subtitulo">Instrucciones</h3>
+          <ul>
+            <li>Mover las piezas presionando las teclas de flechas</li>
+            <li>Encontrar el orden correcto de las piezas</li>
+          </ul>
+        </section>
+        <section id='juego'>
+          <button value="Mezclar" class="btn mezclar" name="Mezclar" onclick="Juego.iniciar()">Mezclar</button>
+          <div class="mov flex">
+            <p >Movimientos restantes: </p>
+            <p id="mov-restantes"></p>
+          </div>
+        </section>
+      </div>
+
+      <canvas class="col-60" id="contenedor-juego" ></canvas >
+    </div>
+  <footer class="centrado">
+    <h4>Autor: Agustín Galleguillo, desarrollador Front-End Jr</h3>
+  </footer>
+    
+
+  </body>
+  <script src="js/jquery.js"></script>
+  <script src="js/juego.js"></script>
+  <script src="js/efectos.js"> </script>
+ </html>
